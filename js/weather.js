@@ -8,16 +8,16 @@ const loadDataAPI = (CityName) => {
 const cityName = document.getElementById('cityName');
 const skyCondition = document.getElementById('skyCondition');
 const temperature = document.getElementById('temperature');
-const feelsLike = document.getElementById('');
-const getHumidity = document.getElementById('');
+const feelsLike = document.getElementById('feelsLike');
+const getHumidity = document.getElementById('humidity');
 
 const showData = (data) => {
     console.log(data);
     cityName.innerText = data.name;
     skyCondition.innerText = data.weather[0].description ;
     temperature.innerText = data.main.temp;
-    temperature.innerText = data.main.feels_like;
-    temperature.innerText = data.main.humidity;
+    feelsLike.innerText = data.main.feels_like;
+    getHumidity.innerText = data.main.humidity;
 
 }
 const getTheSearchCity = () => {
