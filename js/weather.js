@@ -8,12 +8,21 @@ const loadDataAPI = (CityName) => {
 const cityName = document.getElementById('cityName');
 const skyCondition = document.getElementById('skyCondition');
 const temperature = document.getElementById('temperature');
+const feelsLike = document.getElementById('');
+const getHumidity = document.getElementById('');
 
 const showData = (data) => {
     console.log(data);
     cityName.innerText = data.name;
     skyCondition.innerText = data.weather[0].description ;
     temperature.innerText = data.main.temp;
+    temperature.innerText = data.main.feels_like;
+    temperature.innerText = data.main.humidity;
 
+}
+const getTheSearchCity = () => {
+    const searchCity = document.getElementById('searchInput').value;
+    loadDataAPI(searchCity);
+    console.log(searchCity);
 }
 loadDataAPI('Rajshahi');
